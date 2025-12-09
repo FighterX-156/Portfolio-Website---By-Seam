@@ -208,14 +208,14 @@
 /* End Card */
 /* Start Home Section */
 .Content {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  right: 0;
-  height: 100%;
-  width: 60%;
-  left: 100px;
-
-  justify-items: flex-end;
+  z-index: 11;
+  width: 1100px;
+  left: 50px;
 }
+
 .home {
   margin-top: 100px;
   font-family: Rajdhani;
@@ -238,12 +238,11 @@
   font-size: 30px;
   font-weight: 100;
 }
-.Section-Name{
-   display: flex;
-   justify-content: flex-end;
-   padding: 1px 10px;
-   font-size: 30px;
-   
+.Section-Name {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1px 10px;
+  font-size: 30px;
 }
 .Heading {
   margin-top: 10px;
@@ -292,7 +291,8 @@
   color: black;
 }
 /* End Home Section */
- /* Start Navigation Section */
+/* Start Navigation Section */
+
 .Navigation {
   height: 100px;
   width: 600px;
@@ -304,11 +304,14 @@
     0px 0px 5px rgba(88, 88, 88, 0.38); */
   position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   bottom: 10px;
   z-index: 11;
-  transform: translateY(-30px);
+  bottom: -400px;
+  right: -250px;
+  transform: translateY(-800px);
   transition: 0.3s linear;
 }
 .Navigation a {
@@ -340,7 +343,7 @@
   color: black;
 }
 .Navigation a:hover > .Name {
-  display:ruby-text ;
+  display: ruby-text;
   font-size: 15px;
   color: rgb(255, 255, 255);
   border-bottom: 4px solid rgb(54, 101, 243);
@@ -352,18 +355,99 @@
 }
 /* End Navigation System */
 /* Start About Section */
-.Gradient-02{
-  
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 350px;
 }
-.About-me{
-   border: 1px solid#ffffff;
-   height: 600px;
-   width: 900px;
-   font-size:30px;
-   
-   
-   
+.Title-02 {
+  gap: 8px;
+  display: flex;
+  height: auto;
+  width: 400px;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 11;
+  position: relative;
+  bottom: 80px;
 }
-.Education{
+.Circle-02 {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50px;
+}
+.about h5 {
+  font-size: 30px;
+  font-weight: 100;
+}
+.Gradient-02 {
+  height: 900px;
+  width: 900px;
+  background: linear-gradient(
+    25deg,
+    rgba(192, 253, 244, 0.591),
+    rgb(0, 0, 0),
+    black
+  );
+  border-radius: 25px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.About-me {
+  position: absolute;
+  border-radius: 25px;
+  height: 900px;
+  width: 900px;
+  padding: 80px 40px;
+  font-size: 30px;
+  text-align: justify;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.14) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.About-me p {
+  opacity: 1;
+  font-weight: 400;
+  font-size: 32px;
+}
 
+.About-me #Name {
+  font-family: Mrs Saint Delafield;
+  font-size: 60px;
+  font-weight: 400;
+  position: relative;
+  top: 60px;
+}
+.Comma {
+  height: 650px;
+  width: 650px;
+  position: relative;
+  opacity: 0.4;
+  top: 103px;
+  right: 90px;
+}
+.Picture-no-2 {
+  opacity: 1;
+  height: 240px;
+  width: 240px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  bottom: 200px;
+  left: 550px;
+  z-index: 11;
+}
+.about:hover > .Gradient-02 {
+  opacity: 1;
+}
+.Education {
 }
