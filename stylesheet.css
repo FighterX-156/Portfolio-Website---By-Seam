@@ -7,6 +7,7 @@
    
 }
 main{
+    
     display: flex;
     width: 100%;
 }
@@ -177,5 +178,72 @@ main::before {
     background-color: white;
     font-size: 1.8rem;
     border-radius: 50%;
+    color: black;
+}
+/* Name Card done!! */
+/* Main Content Started */
+article{
+  margin-top: 110px;
+  padding-left: 30%;
+  padding-right: 8%;
+}
+/* Introduction */
+.Introduction{
+    flex-direction: column;
+    gap: 30px;
+}
+.Intro-H{
+    gap: 5px;
+    align-items: center;
+    
+}
+.Circle{
+  height: 15px;
+  width: 15px;
+  border-radius:50% ;
+  background-color: white;
+}
+.H{
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+.Intro-Text-01{
+    font-size: 6.5rem;
+    font-weight: 900;   
+}
+.Intro-Txt-Container{
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+}
+.Intro-Text-02{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    opacity: 0.6;
+    text-align: justify;
+    transition: 0.8s;
+}
+.Intro-Txt-Container:hover >.Intro-Text-02{
+    opacity: 1;
+}
+.Skill-Buttons{
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.Button-Design{
+    font-size: 1.4rem;
+    padding: 8px 15px;
+    border-radius: 25px;
+    box-shadow: 0 0 4px white;
+    background-color: black;
+    transition: 0.3s;
+}
+.Button-Design:hover{
+    background-color: white;
     color: black;
 }
