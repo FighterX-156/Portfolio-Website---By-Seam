@@ -1,321 +1,466 @@
-*{  
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Space Grotesk;
-    color: white;
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Space Grotesk;
+  color: white;
 }
-main{
-    
-    display: flex;
-    width: 100%;
+main {
+  display: flex;
+  width: 100%;
 }
 main::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    min-height: 100vh;
-    background: url(Resources/Background.gif);
-    background-size: cover; 
-    filter: brightness(35%);
-    z-index: -1; 
+  content: "";
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background: url(Resources/Background.gif);
+  background-size: cover;
+  filter: brightness(35%);
+  z-index: -1;
 }
-.flex{
-   display: flex;
+.flex {
+  display: flex;
 }
-.fixed{
-    top: 12%;
-    left: 4%;
-    margin: auto;
-    position: fixed;
+.fixed {
+  top: 12%;
+  left: 4%;
+  margin: auto;
+  position: fixed;
 }
-.Card-Container{
-    max-width: 400px;
-    border-radius: 25px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
-    position: relative;
-    overflow:hidden ;
-} 
-.Card-Container::after{
-    content: "";
-    top: 0;
-    position: absolute;
-    border-radius: 25px;
-    height: 0%;
-    width: 100%;
-    z-index: -1;
-    background: linear-gradient(0deg, rgba(255,255,255,0),#e5f8f99d);
-    transition: 0.3s linear;
-    
+.Card-Container {
+  max-width: 400px;
+  border-radius: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+  position: relative;
+  overflow: hidden;
 }
-.Card-Container:hover::after{
-       height: 40%;
-       width: 100%;
+.Card-Container::after {
+  content: "";
+  top: 0;
+  position: absolute;
+  border-radius: 25px;
+  height: 0%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0), #e5f8f99d);
+  transition: 0.3s linear;
 }
-.Card-Container:hover >.LM-Container>.S-logo{
-    background-color: black;
+.Card-Container:hover::after {
+  height: 40%;
+  width: 100%;
 }
-.Card-Container:hover >.LM-Container>.Moto{
-    background-color: black;
+.Card-Container:hover > .LM-Container > .S-logo {
+  background-color: black;
 }
-.LM-Container{
-    gap:70px;
+.Card-Container:hover > .LM-Container > .Moto {
+  background-color: black;
 }
-.S-logo{
-    width: 50px;
-    border: 2px solid white;
-    box-shadow: 0 0 8px white;
-    border-radius: 50%;
+.LM-Container {
+  gap: 70px;
 }
-.Moto{
-     font-size: 18px;
-     font-weight: 200;
-     border: 2px solid white;
-     box-shadow: 0 0 8px white;
-     border-radius: 25px;
-     text-align: center;
-     padding: 10px 20px;
+.S-logo {
+  width: 50px;
+  border: 2px solid white;
+  box-shadow: 0 0 8px white;
+  border-radius: 50%;
 }
-.Image-Container-01{
-     margin: 50px 0;
-     flex-direction: column;
-     align-items: center;
-     position: relative;
-
+.Moto {
+  font-size: 18px;
+  font-weight: 200;
+  border: 2px solid white;
+  box-shadow: 0 0 8px white;
+  border-radius: 25px;
+  text-align: center;
+  padding: 10px 20px;
 }
-.Profile-Pic{
-    max-width: 200px;
-    border-radius: 25px; 
+.Image-Container-01 {
+  margin: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
-.Sign{
-    max-width: 180px;
-    position: absolute;
-    top: 100px;
+.Profile-Pic {
+  max-width: 200px;
+  border-radius: 25px;
 }
-.Email-Add{
-     margin: 40px 0;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: 8px;
+.Sign {
+  max-width: 180px;
+  position: absolute;
+  top: 100px;
 }
-.Email{
-    font-size: 22px;
-    font-weight: 900;
+.Email-Add {
+  margin: 40px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-.Address{
-    font-size: 18px;
-    font-weight: 200;
+.Email {
+  font-size: 22px;
+  font-weight: 900;
 }
-.Link-list{
-    list-style: none;
-    gap: 25px;
+.Address {
+  font-size: 18px;
+  font-weight: 200;
 }
-.Icon{
-    height: 50px;
-    width: 50px;
-    line-height: 48px;
-    background-color: white;
-    font-size: 2rem;
-    border-radius: 50%;
-    color: black;
-    transition: 0.3s;
+.Link-list {
+  list-style: none;
+  gap: 25px;
 }
-.fa-facebook-f:hover{
-    background-color: #0866ff;
-    color: white;
+.Icon {
+  height: 50px;
+  width: 50px;
+  line-height: 48px;
+  background-color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: black;
+  transition: 0.3s;
 }
-.fa-instagram:hover{
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    color: white;
+.fa-facebook-f:hover {
+  background-color: #0866ff;
+  color: white;
 }
-.fa-github:hover{
-    background-color: black;
-    color: white;
-   
+.fa-instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white;
 }
-.fa-linkedin-in:hover{
-    background-color: #0a66c2;
-    color: white;
+.fa-github:hover {
+  background-color: black;
+  color: white;
 }
-.Button-bundle{
-     margin: 50px 0;
-     gap: 20px;
-     width: 90%;
-
+.fa-linkedin-in:hover {
+  background-color: #0a66c2;
+  color: white;
 }
-.DCV-button{
-   height: 55px;
-   width: 70%; 
-   background-color: rgb(0, 0, 0);
-   border: 2px solid white;
-   border-radius: 35px;
-   font-size: 22px;
-   font-weight:900;
-   color: rgb(255, 255, 255);
+.Button-bundle {
+  margin: 50px 0;
+  gap: 20px;
+  width: 90%;
 }
-.DCV-button:hover{
-    background-color: white;
-    color: black;
+.DCV-button {
+  height: 55px;
+  width: 70%;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;
+  border-radius: 35px;
+  font-size: 22px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
 }
-.Connect-button{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
+.DCV-button:hover {
+  background-color: white;
+  color: black;
 }
-.Connect-icon{
-    
-    height: 55px;
-    width: 55px;
-    line-height: 60px;
-    background-color: white;
-    font-size: 1.8rem;
-    border-radius: 50%;
-    color: black;
+.Connect-button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+.Connect-icon {
+  height: 55px;
+  width: 55px;
+  line-height: 60px;
+  background-color: white;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  color: black;
 }
 /* Name Card done!! */
 /* Main Content Started */
-article{
+article {
   margin-top: 110px;
   padding-left: 30%;
   padding-right: 8%;
 }
-.Margin-Bottom{
-    margin-bottom: 120px;
+.Margin-Bottom {
+  margin-bottom: 120px;
 }
 /* Introduction */
-.Introduction{
-    flex-direction: column;
-    gap: 60px;
+.Introduction {
+  flex-direction: column;
+  gap: 60px;
 }
-.Intro-H{
-    gap: 5px;
-    align-items: center;
-    
+.Intro-H {
+  gap: 5px;
+  align-items: center;
 }
-.Circle{
+.Circle {
   height: 15px;
   width: 15px;
-  border-radius:50% ;
+  border-radius: 50%;
   background-color: #64faff9d;
 }
-.H{
+.H {
   font-size: 1.7rem;
   font-weight: 100;
   letter-spacing: 2px;
 }
-.Intro-Text-01{
-    font-size: 6.5rem;
-    font-weight: 900;   
+.Intro-Text-01 {
+  font-size: 6.5rem;
+  font-weight: 900;
 }
-.Intro-Txt-Container{
-    flex-direction: column;
-    padding: 24px;
-    border-radius: 25px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+.Intro-Txt-Container {
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
 }
-.Intro-Text-02{
-    font-size: 1.5rem;
-    margin: 10px 0;
-    opacity: 0.6;
-    text-align: justify;
-    transition: 0.8s;
-    letter-spacing: 1px;
+.Intro-Text-02 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  opacity: 0.6;
+  text-align: justify;
+  transition: 0.8s;
+  letter-spacing: 1px;
 }
-.Intro-Txt-Container:hover >.Intro-Text-02{
-    opacity: 1;
+.Intro-Txt-Container:hover > .Intro-Text-02 {
+  opacity: 1;
 }
-.Skill-Buttons{
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 20px 0;
+.Skill-Buttons {
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
-.Button-Design{
-    font-size: 1.4rem;
-    padding: 8px 15px;
-    border-radius: 25px;
-    box-shadow: 0 0 4px white;
-    background-color: black;
-    transition: 0.3s;
+.Button-Design {
+  font-size: 1.4rem;
+  padding: 8px 15px;
+  border-radius: 25px;
+  box-shadow: 0 0 4px white;
+  background-color: black;
+  transition: 0.3s;
 }
-.Button-Design:hover{
-    background-color: white;
-    color: black;
+.Button-Design:hover {
+  background-color: white;
+  color: black;
 }
 /* Introduction Ended */
 /* About Me Started */
-.About-me{
-    
-    flex-direction: column;
-    gap: 30px;
+.About-me {
+  flex-direction: column;
+  gap: 30px;
 }
-.About-me-H{
-    gap: 5px;
-    align-items: center;
+.About-me-H {
+  gap: 5px;
+  align-items: center;
 }
-.Statement-Container{
-    background: url();
-    padding: 40px;
-    border-radius: 25px;
-     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
-    flex-direction: column;
-    gap: 30px;
-    position: relative;
+.Statement-Container {
+  background: url();
+  padding: 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.Statement-Container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+ 
+  height: 0%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(0deg, #64faff9d, rgba(255, 255, 255, 0));
+  transition: 0.3s linear;
+}
+.Statement-Container:hover::after {
+  height: 50%;
+  width: 100%;
+}
+.Statement-Container:hover > .Statement {
+  opacity: 1;
+}
 
+.Statement {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.7;
+  text-align: justify;
+  line-height: 40px;
 }
-.Statement-Container::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 25px;
-    height: 0%;
-    width: 100%;
-    z-index: -1;
-    background: linear-gradient(0deg,#64faff9d , rgba(255,255,255,0));
-    transition: 0.3s linear;
+.Statement b {
+  font-weight: 700;
+}
+.Image-Container-02 {
+  padding: 0 20px;
+  max-width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.Name-Sign {
+  max-width: 12%;
+}
+.Comma {
+  max-width: 25%;
+}
+/* Experience Started */
 
+.Experience {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "Experience Problem-Count Project-Count"
+    "Experience Review-Count  Clients-Count";
 }
-.Statement-Container:hover::after{
-     height: 50%;
+.Experience-Count {
+  grid-area: Experience;
 }
-.Statement-Container:hover >.Statement{
-    opacity: 1;
+.Problem-Count {
+  grid-area: Problem-Count;
+}
+.Project-Count {
+  grid-area: Project-Count;
+}
+.Review-Count {
+  grid-area: Review-Count;
+}
+.Clients-Count {
+  grid-area: Clients-Count;
 }
 
-.Statement{
-    font-size: 1.5rem;
-    font-weight: 300;
-    opacity: 0.7;
-    text-align: justify;
-    line-height: 40px;
+.Count-Card {
+  padding: 30px 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+  /* border: 1px solid white; */
 }
-.Statement b{
-    font-weight: 700;
+.Count-Card:hover {
+  background-color: white;
+  box-shadow: inset 0 0 8px rgb(0, 0, 0);
 }
-.Image-Container-02{
-    padding: 0 20px;
-    max-width: 100%;
-    align-items: flex-end;
-    justify-content: space-between;
+.Exp-Num {
+  font-size: 5.5rem;
 }
-.Name-Sign{
-    max-width:12%;
+.Exp-Title {
+  font-size: 2.5rem;
 }
-.Comma{
-    max-width:25%;
+.Number {
+  font-size: 3rem;
+  font-weight: 900;
 }
+.Title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.Count-Card:hover > .Number {
+  color: #00adb5;
+}
+.Count-Card:hover > .Title {
+  color: black;
+}
+.Count-Card:hover > .Exp-Num {
+  color: #00adb5;
+}
+.Count-Card:hover > .Exp-Title {
+  color: black;
+}
+
 /* About Me Done!! */
+/* Education Started */
+
+.Education-H {
+  gap: 5px;
+  align-items: center;
+}
+.Top-Bar {
+  justify-content: space-between;
+}
+.Tag {
+  font-size: 2rem;
+  font-weight: 900;
+  transition: 0.3s linear;
+}
+.Box {
+  border: 2px solid white;
+  padding: 5px 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.3s linear;
+}
+
+.Parent-container{
+    margin: 60px 0;
+    gap: 25px;
+    flex-direction: column;
+}
+.Parent-container:hover>.Top-Bar>.Tag{
+    color: #00adb5;
+
+}
+.Parent-container:hover>.Top-Bar>.Box{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
+    background-color: #00adb5;
+    border:2px solid white;
+
+}
+.Degree-Details {
+  padding: 40px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+  position: relative;
+  overflow: hidden;
+}
+.Degree-Details::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(180deg, #64faff9d, rgba(255, 255, 255, 0));
+  transition: 0.3s linear;
+}
+.Degree-Details:hover::after {
+  height: 60%;
+  width: 100%;
+}
+.Degree-Details h1{
+    margin-bottom: 20px;
+}
+.Degree-Details h2{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.LOGO {
+  border-radius: 25px;
+  width: 20%;
+}
+/* Education Done!! */
