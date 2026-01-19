@@ -83,7 +83,7 @@
           <div class="Button-bundle flex">
             <button type="button" class="DCV-button">Download CV</button>
             <button type="button" class="Connect-button">
-              <a href=""
+              <a href="#Contact"
                 ><i class="fa-solid fa-paper-plane Connect-icon"></i
               ></a>
             </button>
@@ -503,15 +503,15 @@
               </li>
             </ul></div>
            </div>
-             <form  action="" class="Form flex">
+             <form  action="https://sheetdb.io/api/v1/uwaq0qalqsute" method="post" class="Form flex" id="contact-form">
               <span class="N-P-Box flex">
-             <input type="text" placeholder="YOUR NAME" class="Input-Box">
-             <input type="number" placeholder="PHONE NUMBER" class="Input-Box">
+             <input type="text" placeholder="YOUR NAME" name="data[Name]" id="Name" class="Input-Box">
+             <input type="number" placeholder="PHONE NUMBER"  name="data[PH-Number]" id="PH-Number" class="Input-Box">
             </span>
-             <input type="email" placeholder="Email Address" class="Input-Box">
-             <input type="Subject" placeholder="SUBJECT" class="Input-Box">
-             <textarea name="textarea" class=" Input-Box textarea" rows="10" placeholder="Write your words here.."></textarea>
-             <button type="submit" class="Submit">Submit</button>
+             <input type="email" placeholder="Email Address" name="data[Email]" id="Email" class="Input-Box">
+             <input type="Subject" placeholder="SUBJECT"name="data[Subject]" id="Subject" class="Input-Box">
+             <textarea  class=" Input-Box textarea" name="data[Text]"rows="10" id="Text" placeholder="Write your words here.."></textarea>
+             <button type="submit" class="Submit" id="Submit">Submit</button>
            </form>
            </div>
           
@@ -525,5 +525,23 @@
         </section>
       </article>
     </main>
+    <script>
+    let form = document.getElementById('contact-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("contact-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                document.getElementById("Submit").innerHTML=" Submitted! ";
+               
+                setTimeout(() =>{
+                window.location.href = "#contact-r8";
+                location.reload();
+                } ,200);
+            });
+        });</script>
   </body>
 </html>
