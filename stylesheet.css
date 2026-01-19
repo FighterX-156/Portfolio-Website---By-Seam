@@ -8,6 +8,9 @@
 main {
   display: flex;
   width: 100%;
+  max-width: 1900px;
+  position: relative;
+  overflow: hidden;
 }
 main::before {
   content: "";
@@ -21,6 +24,51 @@ main::before {
 }
 .flex {
   display: flex;
+}
+.Nav-Bar{
+  border-radius: 50px;
+  max-height: 70%;
+  padding: 30px 14px;
+  margin: 100px 20px ;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+  z-index: 1;
+  right: 0;
+  position: fixed;
+}
+
+.Nav-Bar li{
+  display: flex;
+  height: 60px;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+  line-height: 48px;
+  
+  font-size: 1.5rem;
+  background-color: black;
+  border-radius: 50%;
+}
+.Nav-Bar i{
+   color: white;
+}
+.Nav-Bar li:hover a>i{
+  color: #00adb5;
+ 
+}
+.Nav-Bar li:hover {
+  background-color: white;
+   border: 1px solid black;
+  box-shadow: inset 0 0 8px rgb(0, 0, 0);
+}
+.Nav-Bar Ul{
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
 }
 .fixed {
   top: 12%;
@@ -184,8 +232,8 @@ main::before {
 /* Main Content Started */
 article {
   margin-top: 110px;
-  padding-left: 30%;
-  padding-right: 8%;
+  padding-left: 28%;
+  padding-right: 10%;
 }
 .Margin-Bottom {
   margin-bottom: 120px;
@@ -460,19 +508,72 @@ article {
   width: 20%;
 }
 /* Education Done!! */
+.Skills-H {
+  gap: 5px;
+  align-items: center;
+}
+.Slide-track {
+  margin:15px 0 ;
+  padding: 15px 0;
+  gap: 20px;
+  overflow-x: scroll;
+  width: 100%;
+  max-width: 1200px;
+  max-height: fit-content;
 
+}
+.Slide-track::-webkit-scrollbar{
+    
+    background-color: white;
+    scrollbar-width: thin;
+    border-radius: 5px;
+}
+.Slide-track::-webkit-scrollbar-thumb{
+ 
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+.Slide-track::-webkit-scrollbar-track{
+  
+  border-radius: 5px;
+  background-color: #00adb5;
+}
+.slide {
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
+  border-radius: 25px;
+  padding: 35px;
+}
+.Language{
+  margin: 60px 0;
+
+}
+.Tools{
+  margin: 70px 0;
+}
+.Lang-Icon{
+  background-color: rgb(170, 170, 170);
+  border-radius: 25px;
+  padding: 20px;
+}
 /* Achievement Started */
 .Achievements-H {
   gap: 5px;
   align-items: center;
 }
-.Achievements-Container{
+.Achievements-Container {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-.Achievement{
+.Achievement {
   border-radius: 25px;
   padding: 30px;
   gap: 40px;
@@ -480,29 +581,28 @@ article {
   background-color: rgba(0, 0, 0, 0.75);
   box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
 }
-.Achievement-Detail{
+.Achievement-Detail {
   text-align: justify;
 }
-.Trophy{
+.Trophy {
   height: 80%;
   width: 22%;
 }
-.Achievement p b{
+.Achievement p b {
   font-size: 1.3rem;
   font-weight: 600;
 }
-.Achievement:hover{
+.Achievement:hover {
   background-color: white;
   box-shadow: inset 0 0 8px rgb(0, 0, 0);
 }
-.Achievement:hover>.Achievement-Detail{
+.Achievement:hover > .Achievement-Detail {
   color: black;
 }
-.Achievement:hover> .Trophy{
-   filter: drop-shadow(5px 5px 10px #000000);
-  
+.Achievement:hover > .Trophy {
+  filter: drop-shadow(5px 5px 10px #000000);
 }
-.Achievement:hover> .Achievement-Detail> b{
+.Achievement:hover > .Achievement-Detail > b {
   color: #00adb5;
 }
 /* Achievement Done!! */
@@ -622,16 +722,16 @@ article {
   gap: 5px;
   align-items: center;
 }
-.Blogs-Holder{
+.Blogs-Holder {
   margin: 60px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
-.Blog-Card{
+.Blog-Card {
   width: 100%;
   max-width: 400px;
-  border-radius: 25px ;
+  border-radius: 25px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.75);
@@ -657,13 +757,13 @@ article {
   height: 50%;
   width: 100%;
 }
-.Blog-Text{
+.Blog-Text {
   overflow: hidden;
   height: 100%;
   max-height: 200px;
   text-align: justify;
 }
-.Blog-Banner{
+.Blog-Banner {
   width: 100%;
   border-radius: 25px;
 }
@@ -673,32 +773,32 @@ article {
   gap: 5px;
   align-items: center;
 }
-.Contact-Container{
+.Contact-Container {
   margin: 40px 0;
-   gap: 40px;
-   justify-content: space-between;
-   align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
 }
-.Location-Card{
-   width: 100%;
-   max-width: 420px;
-   flex-direction: column;
-   gap: 20px;
-   padding: 50px;
-   border-radius: 25px ;
+.Location-Card {
+  width: 100%;
+  max-width: 420px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+  border-radius: 25px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.75);
   box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.185);
-  
 }
-.Location-Card iframe{
-  border-radius: 25px;width: 100%;
+.Location-Card iframe {
+  border-radius: 25px;
+  width: 100%;
 }
 
-.Form{
-  width:60% ;
-  border-radius: 25px ;
+.Form {
+  width: 60%;
+  border-radius: 25px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.75);
@@ -710,7 +810,7 @@ article {
   position: relative;
   overflow: hidden;
 }
-.Form::after{
+.Form::after {
   content: "";
   position: absolute;
   top: 0;
@@ -720,14 +820,14 @@ article {
   z-index: -1;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0), #e5f8f99d);
 }
-.N-P-Box{
+.N-P-Box {
   width: 100%;
   gap: 24px;
 }
-.Input-Box{
+.Input-Box {
   margin: 5px 0;
   padding: 15px;
-  width: 100% ;
+  width: 100%;
   font-size: 1rem;
   font-weight: 500;
   color: rgb(255, 255, 255);
@@ -736,7 +836,7 @@ article {
   border: 2px solid white;
   box-shadow: 0 0 8px white;
 }
-.Submit{
+.Submit {
   height: 55px;
   width: 100%;
   background-color: white;
@@ -747,23 +847,23 @@ article {
 }
 /* Contact Me Done!! */
 /* Footer Started */
-.Footer-Container{
+.Footer-Container {
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.Footer-Container hr{
-  width: min(90%, 900px); 
+.Footer-Container hr {
+  width: min(90%, 900px);
   border: none;
   border-top: 1px solid #e0e0e0;
 }
-.Copyright{
+.Copyright {
   font-size: 1.4rem;
   font-weight: 500;
 }
-.Footer-Container img{
-  width:30%;
+.Footer-Container img {
+  width: 30%;
 }
 /* Footer Ended */
